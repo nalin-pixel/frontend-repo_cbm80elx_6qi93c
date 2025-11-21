@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import MagneticButton from './MagneticButton'
 
 export default function CTA() {
   return (
@@ -8,8 +9,8 @@ export default function CTA() {
           <h3 className="text-2xl md:text-3xl font-semibold text-white">Start ideating in minutes</h3>
           <p className="mt-3 text-slate-300">Kick off your first project, invite your team and bring clarity to what to build next.</p>
           <div className="mt-6 flex items-center justify-center gap-3">
-            <a href="#" className="rounded-lg bg-gradient-to-r from-blue-500 to-cyan-400 px-5 py-3 text-white font-semibold shadow-lg shadow-blue-500/20">Create free account</a>
-            <a href="#" className="rounded-lg border border-white/10 bg-white/5 px-5 py-3 text-slate-200 hover:bg-white/10 transition-colors">Book a demo</a>
+            <MagneticButton as="a" href="#" className="rounded-lg bg-gradient-to-r from-blue-500 to-cyan-400 px-5 py-3 text-white font-semibold shadow-lg shadow-blue-500/20">Create free account</MagneticButton>
+            <MagneticButton as="a" href="#" className="rounded-lg border border-white/10 bg-white/5 px-5 py-3 text-slate-200 hover:bg-white/10 transition-colors">Book a demo</MagneticButton>
           </div>
         </motion.div>
       </div>

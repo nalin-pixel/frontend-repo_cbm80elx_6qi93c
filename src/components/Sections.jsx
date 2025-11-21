@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
+import SectionTransition from './SectionTransition'
 
 export default function Sections() {
   const ref = useRef(null)
@@ -33,6 +34,8 @@ export default function Sections() {
         </div>
       </section>
 
+      <SectionTransition />
+
       {/* Pricing Section */}
       <section id="pricing" className="min-h-screen snap-start flex items-center py-24">
         <div className="mx-auto max-w-7xl px-6 w-full">
@@ -62,6 +65,8 @@ export default function Sections() {
         </div>
       </section>
 
+      <SectionTransition />
+
       {/* FAQ Section */}
       <section id="faq" className="min-h-screen snap-start flex items-center py-24">
         <div className="mx-auto max-w-5xl px-6 w-full">
@@ -79,6 +84,8 @@ export default function Sections() {
           </div>
         </div>
       </section>
+
+      <SectionTransition />
 
       {/* Contact/CTA clone for snap flow end */}
       <section className="min-h-screen snap-start flex items-center py-24">
