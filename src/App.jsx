@@ -8,11 +8,18 @@ import Marquee from './components/Marquee'
 import ScrollSnapHint from './components/ScrollSnapHint'
 import ProgressBar from './components/ProgressBar'
 import CursorGlow from './components/CursorGlow'
+import Grain from './components/Grain'
 
 function App() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-200 snap-y snap-mandatory overflow-y-auto">
-      <div className="fixed inset-0 -z-0 bg-[radial-gradient(1000px_600px_at_-10%_-10%,rgba(56,189,248,0.12),transparent),radial-gradient(800px_500px_at_110%_-10%,rgba(99,102,241,0.12),transparent),radial-gradient(700px_500px_at_50%_120%,rgba(15,23,42,1),rgba(2,6,23,1))]" />
+      {/* Subtle ambient gradients + vignette */}
+      <div className="fixed inset-0 -z-10">
+        <div className="absolute inset-0 bg-[radial-gradient(900px_500px_at_-10%_-10%,rgba(56,189,248,0.10),transparent),radial-gradient(800px_500px_at_110%_-10%,rgba(99,102,241,0.10),transparent),radial-gradient(700px_500px_at_50%_120%,rgba(15,23,42,1),rgba(2,6,23,1))]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent,rgba(2,6,23,0.2)_20%,transparent_60%,rgba(2,6,23,0.5))]" />
+      </div>
+
+      <Grain opacity={0.05} />
 
       <ProgressBar />
       <CursorGlow />

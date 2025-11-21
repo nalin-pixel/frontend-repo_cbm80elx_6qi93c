@@ -10,11 +10,11 @@ export default function Marquee() {
           <motion.div
             initial={{ x: 0 }}
             animate={{ x: ['0%', '-50%'] }}
-            transition={{ repeat: Infinity, duration: 28, ease: 'linear' }}
-            className="flex gap-12 whitespace-nowrap text-slate-400"
+            transition={{ repeat: Infinity, duration: 36, ease: 'linear' }}
+            className="flex gap-12 whitespace-nowrap text-slate-400 opacity-70 hover:opacity-100 transition-opacity"
           >
             {[...logos, ...logos].map((l, i) => (
-              <span key={i} className="text-sm tracking-widest uppercase opacity-70 hover:opacity-100 transition-opacity">{l}</span>
+              <span key={i} className="text-sm tracking-widest uppercase">{l}</span>
             ))}
           </motion.div>
         </div>
